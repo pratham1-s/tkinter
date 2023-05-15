@@ -8,11 +8,12 @@ Created on Mon May 15 21:25:07 2023
 from tkinter import *
 
 def convert():
-    val_changed = int(entry.get())*1.60934
-    val_label.config(text=str(val_changed))
+    val_changed = float(entry.get())*1.60934
+    val_label.config(text=f'{val_changed}')
     
 window = Tk()
 window.title('Miles to KM convertor')
+window.config(padx=20, pady=20)
 window.minsize(width=500, height=500)
 
 entry = Entry(width=20)
